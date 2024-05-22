@@ -1,0 +1,9 @@
+ipykernel==6.23.1
+pandas==1.5.3
+scikit-learn==1.2.2
+xgboost==2.0.1
+catboost==1.2.2
+db-dqlite3==0.0.1
+python==3.10.9
+plotly-express==0.4.1
+joblib==1.2.0
