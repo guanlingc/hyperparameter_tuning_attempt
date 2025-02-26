@@ -10,4 +10,4 @@ class ModelExporter:
         Path(folder_location).mkdir(exist_ok=True)
 
     def export_model(self, trained_model, model_name:str):
-        joblib.dump(trained_model, f'../aiap17-Chan-Guan-Ling-162D/model/{model_name}.pkl')
+        joblib.dump(trained_model, f'../{model_name}.pkl')
