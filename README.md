@@ -68,6 +68,7 @@ However the models i used, had alot of features used. So from here i see a 3-fol
 1. Number of features used? Is more always better? information might not be readliy avaliable 
 2. What Feature engineering techniques? Each feature can be engineered differently depending on feature and model.
 3. Which model should be used? some models are sensitive to feature engineering techniques used.
+4. My src folder is messy, this could be organized better in the future.
 
 
 
