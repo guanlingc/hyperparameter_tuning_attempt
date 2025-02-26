@@ -1,6 +1,13 @@
-# aiap17-Chan-Guan-Ling-162D
-E-mail Address: chan.guanling@gmail.com
+# Description of Project
 
+## Business Problem 
+The telco company that you are working for has experienced an increase in amount of scam calls made in recent times. This scam calls have been accountable for losses of up to $200 million per year. A
+As a on-going effort to protect their customers, the company has tasked you, a machine learning engineer intern, to produce a prototype model that will be able to classify if a call is a scam call or not. You will be provided with a call log that has a mix of scam calls and non scam calls. 
+
+## The solution
+Using the provided data, build a binary  classification model that can predict if a call is scam or not.
+
+## Folder Structure
 1. data - Storage location for dataset
 2. model - Storage location for .pkl file and target location for trained model export
 3. src - source code with python classes and functions
@@ -13,7 +20,7 @@ E-mail Address: chan.guanling@gmail.com
     * model_exporter.py - class to create a folder and export trained models as a .pkl file
     * main.py - Main pipeline
 
-### Flow of pipeline 
+## Flow of pipeline 
 ##### Data preparation
 1. Data is extracted from 'data' folder via _DataLoader_
 2. Data is passed onto _DataCleaner_ for all feature engineering using `.get_clean_data`
@@ -29,11 +36,12 @@ E-mail Address: chan.guanling@gmail.com
 6. After splitting, data is scaled
 7. Model is trained using X_test_scaled
 8. Model can be exported via `.export_model`using _ModelExporter_
-  
-|Feature Name|Engineering Performed|
-|---|---|
-|ID|Used to sieve out duplicates, not used otherwise|
-|Call Duration| Removed Outlier and normalized values|
+
+## Features of the dataset
+|Feature Name  |Type of Feature Engineering Performed|
+|--------------|-------------------------------------|
+|ID            |Used to sieve out duplicates, not used otherwise|
+|Call Duration | Removed Outlier and normalized values|
 |Call Frequency| Binning of into 4 bins and one hot encoding|
 |Financial Loss| Filled missing values with mean|
 |Flagged by Carrier| One hot encoding|
@@ -45,8 +53,9 @@ E-mail Address: chan.guanling@gmail.com
 |Device Battery| One hot encoding|
 |Scam Call|Label encoding|
 
+## Conclusion
 
-Models used should be suitable for a classification problem such as Logistic Regression Model, Catboost and XGBoost
+Models used should be suitable for a classification problem such as Logistic Regression Model, Catboost and XGBoost.
 1 model from each type was used to determine if a simpler model (i.e Logistic regression) would be better than a complex model.
 Typical trade-offs are computation cost, simpler models take less time and computing resources to complete.
 This depends on the nature of deployment intended be it offline or online modes. Will there be changes to upstream processing of data?
@@ -54,12 +63,12 @@ Will it change overtime etc?
 Accuracy is used to evaluate model and is further supplemented with confusion matrix.
 Of the 3 models provided, XG Boost model performs best. 
 
+## Takeaway
 However the models i used, had alot of features used. So from here i see a 3-fold issue. 
 1. Number of features used? Is more always better? information might not be readliy avaliable 
 2. What Feature engineering techniques? Each feature can be engineered differently depending on feature and model.
 3. Which model should be used? some models are sensitive to feature engineering techniques used.
 
-I understand that this work is lacking in certain areas.
 
-Finally, I would like to thank the AIAP Team for providing technical assessments and providing feedback to help me identify knowledge gaps 
-so that i can continue to improve my proficiency in such a task. 
+
+
